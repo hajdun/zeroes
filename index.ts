@@ -19,10 +19,7 @@ const getClosestToZero = (array: number[]): number => {
     let item = array[i];
     if (item !== 0) {
       onlyZeroes = false;
-      if (
-        item !== 0 &&
-        (Math.abs(item) < Math.abs(found) || item === Math.abs(found))
-      ) {
+      if (Math.abs(item) < Math.abs(found) || item === Math.abs(found)) {
         found = item;
       }
     }
@@ -34,4 +31,6 @@ const getClosestToZero = (array: number[]): number => {
   return found;
 };
 
-appDiv.innerHTML = `<h1>TypeScript Starter</h1> ${getClosestToZero(numArray)}`;
+appDiv.innerHTML = `<h1>Closest number to zero from array</h1> ${getClosestToZero(
+  numArray
+)}`;
